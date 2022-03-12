@@ -1,0 +1,291 @@
+%-------------------------
+% Resume in Latex
+% Author : Akshay Kumar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11.75pt]{scrartcl} % a4paper letterpaper
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.8in} % 0.7 
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 &
+    %   \textbf{\small #2}
+      \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------
+%%%%%% My Added Code
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+}
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+%------------------------------------------
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Avatar Aang} \\ 
+    % \vspace{1pt}
+    % 123 Street Name, Town, State 12345 \\ \vspace{1pt}
+    {\raisebox{-0.2\height}\faAngleRight\ \href{tel:+917022123456}{+91-7022123456}} ~
+    {\raisebox{-0.2\height}\faAngleRight\ \href{mailto:avatar.aang.007@gmail.com}{avatar.aang.007@gmail.com}} ~ 
+    {\raisebox{-0.2\height}\faAngleRight\ \href{https://youtu.be/1vl7BlNWVgc}{avatar-portfolio.netlify.app}}\\  ~
+    {\raisebox{-0.2\height}\faAngleRight\ \href{https://youtu.be/1vl7BlNWVgc}{github.com/Avatar-Aang-007}}  ~
+    {\raisebox{-0.2\height}\faAngleRight\ \href{https://youtu.be/1vl7BlNWVgc}{linkedin.com/in/Avatar-Aang-007}}  ~
+    \vspace{-8pt}
+\end{center}
+%------------------------------
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer Intern}{August 2021 -- present}
+      {Company X}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Work as part of a front-end team to build cross-platform, responsive retail banking and investment applications using JavaScript.}
+        \resumeItem{Migrate the applications to the new architecture, improving load time and performance by 20-30\%. Overhauled the application UI, delivering new features, and resolved issues as part of continuous integration and delivery.}
+      \resumeItemListEnd
+      \vspace{4pt}
+    \resumeSubheading
+      {Back-end Web Developer Intern}{November 2020 -- January 2021}
+      {Company Y}{Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Wrote modern and performant code using the Django web framework for scheduling social media posts.} 
+        \resumeItem{Integrated Twitter API and Facebook Graph API in web apps for monitoring engagement and set up Cron jobs. Optimized system performance as compared to old PHP code-base.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+%------------------------------
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{QKart: e-commerce website \href{https://youtu.be/1vl7BlNWVgc}{\faLink} \hspace{0.25em} \href{https://youtu.be/1vl7BlNWVgc}{\faGithub}} $|$ \emph{React.js, Express, MongoDB}}
+          {November 2020}
+          \resumeItemListStart
+            \resumeItem{An end-to-end e-commerce website. Users can create account and browse various products.}
+            \resumeItem{Key features of the application include searching items by keyword, adding and removing items from cart and checkout service on given address.}
+            \resumeItem{Used Node.js \& Express to build REST APIs and passport.js for JWT token-based authentication. Frontend was built using React.js.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{XFlix: Youtube Clone \href{https://youtu.be/1vl7BlNWVgc}{\faLink} \hspace{0.25em} \href{https://youtu.be/1vl7BlNWVgc}{\faGithub}} $|$ \emph{React.js, JavaScript}}
+          {November 2020}
+          \resumeItemListStart
+            \resumeItem{A responsive video sharing platform which hosts videos and allows users to upload their own videos. Users can also like/dislike videos.}
+            \resumeItem{Other features of the application include filtering the videos based on content-rating/age, views, genres and keyword based search.}
+            \resumeItem{The application was built using React.js with Hooks and Context-APIs for state management and theming.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{AI-powered Photo Gallery \href{https://youtu.be/1vl7BlNWVgc}{\faGithub}} $|$ \emph{Django, JavaScript, PostgreSQL, and Azure cognitive services}}
+          {November 2020}
+          \resumeItemListStart
+            \resumeItem{It is a web-based photo gallery. Users can upload their pictures for online-backup by creating accounts.}
+            \resumeItem{The key feature of the application is that it detects and recognizes the faces of different people in a picture. The pictures are sorted in albums based on different faces identified.}
+            \resumeItem{Used Azure Cognitive Service SDK for Face Detection and Recognition and Django for web-app.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{Travel Website \href{https://youtu.be/1vl7BlNWVgc}{\faLink} \hspace{0.25em} \href{https://youtu.be/1vl7BlNWVgc}{\faGithub}} $|$ \emph{HTML5, CSS, Bootstrap, and JavaScript}}
+          {November 2020}
+          \resumeItemListStart
+            \resumeItem{A responsive website built using Bootstrap where users can discover cities and explore popular destinations.}
+            \resumeItem{Users can choose from different activities in a destination based on filter. Upon selecting an activity, they can read more about it and make reservations.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{Flack: Chat and File-sharing \href{https://youtu.be/1vl7BlNWVgc}{\faGithub}} $|$ \emph{Flask, Web-sockets, HTML5, CSS}}
+          {November 2020}
+          \resumeItemListStart
+            \resumeItem{It is an online, real-time messaging service using Flask and web-sockets, similar to Slack.}
+            \resumeItem{Users can create channels (i.e. chat rooms) to communicate in, as well as see and join existing channels. In a channel they can message and upload files.}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+%----------------------------------------
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{tabular}{p{13em} p{1em} p{30em}}
+        \textbf{\small{Languages and Databases}}&  &  \small{C++, JavaScript, Python, HTML, CSS, Java, SQL, MongoDB} \\
+        \textbf{\small{Libraries and Frameworks}} &  & \small{React.js, Redux, Django, Flask, Node.js, Express}  \\
+        \textbf{\small{Tools}} &  & \small{Figma, Linux, Git/GitHub, Postman, Docker, AWS, Azure}
+\end{tabular}
+\vspace{-8pt}
+%------------------------------------
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Engineering, Computer Science}{August 2017 -- August 2021}
+      {Birla Institute of Technology - Pilani (BITS)}{CGPA: 8.55}
+  \resumeSubHeadingListEnd
+  \vspace{-8pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Senior Secondary - XII / HighSchool}{May 2016 -- June 2017}
+      {Kendriya Vidyalaya No.1, Jalahalli West}{Percentage: 93.4\%}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+\section{Certifications / Open-Source Contribution / Competitive-Coding Profiles}
+\begin{tabular}{p{19em} p{0.5em} p{30em}}
+        \textbf{\small{Design and Analysis of Algorithms - NPTEL :}}&  &  \small{\href{https://youtu.be/1vl7BlNWVgc}{https://youtu.be/1vl7BlNWVgc}} \\
+        \textbf{\small{Data Analyst Nano Degree - Udacity :}} &  & \small{\href{https://youtu.be/1vl7BlNWVgc}{https://youtu.be/1vl7BlNWVgc}}  \\
+        \textbf{\small{Databases and SQL - Coursera :}} &  & \small{\href{https://youtu.be/1vl7BlNWVgc}{https://youtu.be/1vl7BlNWVgc}}
+\end{tabular}
+\vspace{-12pt}
+%--------------------------------------
+
+
+%-----------ACHIEVEMENTS---------------
+\section{Achievements}
+    \begin{itemize}[itemsep=-0.2pt, parsep=3pt]
+        \item\small Secured All India Rank of 1896 out of 200K participants in Famous Coding Comp.
+        \item Second runner-up in college in ABC Hackathon All India contest.
+        \item Lead Speaker in Tech Conference conducted by Google Developer Students Club.
+    \end{itemize}
+%-------------------------------------
+    
+\end{document}
