@@ -2,7 +2,8 @@
 Software Engineer Resume Template for freshers or folks with less than 1 year of corporate work experience
 
 
-Import this in a Latex editor like overleaf for editing and using. 
+Import **Resume-Template-mk1.tex** in a Latex editor (like overleaf) for editing. 
 
+## Resume Sample:
 
 ![Resume-Sample-Image](./Resume-Sample-image.png)
