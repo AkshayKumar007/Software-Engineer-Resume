@@ -3,3 +3,6 @@ Software Engineer Resume Template for freshers or folks with less than 1 year of
 
 
 Import this in a Latex editor like overleaf for editing and using. 
+
+
+![Resume-Sample-Image](./Resume-Sample-image.png)
